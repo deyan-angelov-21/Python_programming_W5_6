@@ -1,36 +1,42 @@
 def showOptions():
     print("Options:")
-    print("1 - Show-count")
-    print("2 - Increase-count")
-    print("3 - Reset-count")
+    print("1 - Show count")
+    print("2 - Increase count")
+    print("3 - Reset count")
     print("0 - Exit")
     return None
 
 def askChoice():
-    choice = input("Your choice: ")
-    if choice.isnumeric():
-        return int(choice)
+    Choice = input("Your choice: ")
+    if Choice.isnumeric():
+        Choice = int(Choice)
     else:
-        print("Unknown.option!")
-        return -1
+        Choice = -1
+    return Choice
 
 def main():
     print("Program starting.")
-    count = 0
+    Count = 0
     while True:
         showOptions()
-        choice = askChoice()
-        if choice == 1:
-            print(f"Current-count: {count}")
-        elif choice == 2:
-            count += 1
-        elif choice == 3:
-            count = 0
-        elif choice == 0:
+        Choice = askChoice()
+        if Choice == 0:
             print("Exiting program.")
             break
+        elif Choice == 1:
+            print("Current count - {}".format(Count))
+        elif Choice == 2:
+            Count += 1
+            print("Count increased!")
+        elif Choice == 3:
+            Count = 0
+            print("Count reset!")
+        else:
+            print("Unknown option!")
+        print("")
+    print("")
     print("Program ending.")
-     return None
+    return None
 
 if __name__ == "__main__":
     main()
