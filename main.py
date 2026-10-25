@@ -10,7 +10,7 @@ def askChoice():
     if choice.isnumeric():
         return int(choice)
     else:
-        print("Unknown option!")
+        print("Unknown.option!")
         return -1
 
 def main():
@@ -32,4 +32,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 
