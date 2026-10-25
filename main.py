@@ -30,7 +30,7 @@ def main():
             print("Count increased!")
         elif Choice == 3:
             Count = 0
-            print("Count reset!")
+            print("Cleared count!")
         else:
             print("Unknown option!")
         print("")
